@@ -1,30 +1,24 @@
 import streamlit as st
 import pandas as pd
 import plotly.graph_objects as go
+# -----------------------
+# HARDCODED LOGIN
+# -----------------------
+VALID_USERNAME = "SFS"
+VALID_PASSWORD = "SFS1"
 
-# -----------------------
-# CONFIG
-# -----------------------
-st.set_page_config(page_title="AKE Sankey", layout="wide")
-
-CSV_URL = "https://github.com/pstrombergsFA/AKE-sankey-app/blob/main/DATA_AKE1.csv"
-
-# -----------------------
-# AUTH
-# -----------------------
 def login():
     st.title("Login")
 
     username = st.text_input("Username")
     password = st.text_input("Password", type="password")
 
-    users = st.secrets["auth"]["users"]
-
     if st.button("Login"):
-        if username in users and password == users[username]:
+        if username == VALID_USERNAME and password == VALID_PASSWORD:
             st.session_state["authenticated"] = True
+            st.success("Logged in successfully")
         else:
-            st.error("Invalid credentials")
+            st.error("Invalid username or password")
 
 if "authenticated" not in st.session_state:
     st.session_state["authenticated"] = False
