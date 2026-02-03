@@ -38,16 +38,6 @@ if not st.session_state["authenticated"]:
 # -----------------------
 df = pd.read_csv(CSV_URL)
 
-# normalize columns just in case
-df.columns = df.columns.str.strip().str.lower()
-
-# -----------------------
-# UI CONTROLS
-# -----------------------
-month = st.selectbox("Select month", sorted(df["month"].unique()))
-year = st.selectbox("Select year", sorted(df["year"].unique()))
-
-df_filtered = df[(df["month"] == month) & (df["year"] == year)]
 
 # -----------------------
 # SANKEY LOGIC
