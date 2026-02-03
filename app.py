@@ -266,16 +266,18 @@ fig.update_layout(
             x=0.01,
             y=1.15,
             xanchor="left",
-            yanchor="top"
+            yanchor="top",
+            font=dict(
+                sice=18)
         )
     ],
     annotations=[
         dict(text="Year / Period", x=0.01, xref="paper", y=1.21, yref="paper",
-             showarrow=False, font=dict(size=11, color="#444"))
+             showarrow=False, font=dict(size=18, color="#444"))
     ],
     title=f"Income Statement – {years[0]} – Month {months[0]}",
     height=900,
-    font=dict(size=10)
+    font=dict(size=18)
 )
 
 fig.show()
