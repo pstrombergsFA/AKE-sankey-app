@@ -1,6 +1,12 @@
 import streamlit as st
 import pandas as pd
 import plotly.graph_objects as go
+
+st.set_page_config(page_title="AKE Sankey", layout="wide")
+
+CSV_URL = "https://raw.githubusercontent.com/pstrombergsFA/AKE-sankey-app/main/DATA_AKE1.csv"
+
+
 # -----------------------
 # HARDCODED LOGIN
 # -----------------------
