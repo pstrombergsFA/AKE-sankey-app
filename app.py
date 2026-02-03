@@ -268,7 +268,7 @@ fig.update_layout(
             xanchor="left",
             yanchor="top",
             font=dict(
-                sice=18)
+                size=18)
         )
     ],
     annotations=[
