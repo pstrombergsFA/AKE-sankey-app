@@ -7,9 +7,9 @@ st.set_page_config(page_title="AKE Sankey", layout="wide")
 CSV_URL = "https://raw.githubusercontent.com/pstrombergsFA/AKE-sankey-app/main/DATA_AKE1.csv"
 
 
-# -----------------------
-# HARDCODED LOGIN
-# -----------------------
+
+#LOGIN
+
 VALID_USERNAME = "SFS"
 VALID_PASSWORD = "SFS1"
 
